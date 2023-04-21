@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testando JS</title>
+    <style>
+        body{
+            color: brown;
+            font-size: 2em;
+        }
+    </style>
 </head>
 <body>
     
     <script>
         var nome = window.prompt('Qual é o seu nome?')
-        document.write(`Olá, ${nome}. Seu nome tem ${nome.length} letras.`)
+        var sal = Number(window.prompt('Qual é o seu salário dos sonhos? (Utilize apenas números na sua resposta.)'))
+        document.write(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras. <br>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()} e em minúsculas é ${nome.toLowerCase()}. <br>`)
+        document.write(`O seu salários dos sonhos é ${sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.`)
     </script>
 </body>
 </html>
