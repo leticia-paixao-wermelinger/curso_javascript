@@ -11,19 +11,25 @@
     </style>
 </head>
 <body>
-    <h1>Iniciando os estudos com DOM</h1>
+    <h1 name="titulo">Iniciando os estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
-    <section>
-        <p>Clique em mim...</p>
+    <section class="secao">
+        <p id="msg">Clique em mim...</p>
     </section>
     <script>
+        // Aqui o 'var' está sendo utilizado para variável mas não é o ideal. Isso será resolvido com escopo.
         var corpo = window.document.body
         var p1 = window.document.getElementsByTagName('p')[0]
-        window.document.write('Está escrito assim:' + p1.innerText)
+        document.write('No primeiro parágrafo, está escrito: ' + p1.innerText)  // Não é necessário digitar o DOM completo para funcionar. Se omitirmos o 'window', não faz diferença.
         var p2 = window.document.getElementsByTagName('p')[1]
         corpo.style.background = 'lightred'
         p2.style.color = 'blue'
+        var msg = window.document.getElementById('msg')
+        var t = window.document.getElementsByName('titulo')
+        t.innerHTML = 'Fazendo testes utilizando DOM' // Pq q não ta funcionando?
+        msg.innerText = 'Este texto foi modificado por JavaScript'
+        window.document.querySelector('.secao').style.color = 'red' // Comando completo, sem utilizar variável
     </script>
 </body>
 </html>
