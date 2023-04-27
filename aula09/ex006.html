@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap');
+        body{
+            background-color: rgba(255, 192, 203, 0.849);
+            text-align: center;
+            font-family: 'Rubik Pixels', cursive;
+            font-size: 3em;
+            line-height: 50vw;
+        }
+        section{
+            position: relative;
+            background-color: rgb(228, 68, 68);
+            color: antiquewhite;
+            margin: 50px auto;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 30px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.459);
+        }
+        p{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            margin: 0px;
+            width: 100%;
+            font-size: fit-content;
+        }
+        function{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 50vw;
+            line-height: 35vw;
+        }
+    </style>
+</head>
+<body>
+    <section id="interaja" onclick="clicar()">
+        <p>Interaja...</p>
+    </section>
+    <script>
+        var bloco = window.document.querySelector('#interaja')
+        bloco.addEventListener('mouseenter', entrar)
+        bloco.addEventListener('mouseout', sair)
+        function clicar() {
+            bloco.innerHTML = 'Clicou!'
+            bloco.style.background = 'blue'
+        }
+        function entrar() {
+            bloco.innerHTML = 'Entrou'
+        }
+        function sair() {
+            bloco.innerHTML = 'Interaja...'
+            bloco.style.background = 'rgb(228, 68, 68)'
+        }
+    </script>
+</body>
+</html>

@@ -26,8 +26,8 @@
         corpo.style.background = 'lightred'
         p2.style.color = 'blue'
         var msg = window.document.getElementById('msg')
-        var t = window.document.getElementsByName('titulo')
-        t.innerHTML = 'Fazendo testes utilizando DOM' // Pq q não ta funcionando?
+        var t = window.document.getElementsByName('titulo')[0]
+        t.innerHTML = 'Fazendo testes utilizando DOM'
         msg.innerText = 'Este texto foi modificado por JavaScript'
         window.document.querySelector('.secao').style.color = 'red' // Comando completo, sem utilizar variável
     </script>
