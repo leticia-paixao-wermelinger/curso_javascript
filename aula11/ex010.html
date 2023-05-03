@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velocidade Máxima</title>
+    <style>
+        .paragrafo{
+            display: inline;
+        }
+    </style>
 </head>
 <body>
     
@@ -15,10 +20,10 @@
     <p>Dirija sempre utilizando o cinto de segurança!</p>
 
     <h1>Nacionalidade</h1>
-    <p></p>
+    <p style=color:red> (Em manutenção) </p>
     <form>
         <label for="pais">Selecione o país em que você nasceu: </label>
-        <!-- <select name="pais" id="paises" required>
+        <select name="pais" id="paises" required>
             <option value="AF">Afeganistão</option>
             <option value="ZA">África do Sul</option>
             <option value="AL">Albânia</option>
@@ -59,10 +64,12 @@
             <option value="TD">Chade</option>
             <option value="CL">Chile</option>
             <option value="outros">Outro</option>
-        </select>-->
-        <input type="text" name="paises" id="paises">
-        <input type="submit" value="Checar nacionalidade" onclick="calcularNacionalidade()">
-        <p id="nac">Sua nacionalidade é: </p>
+        </select>
+        <!--<input type="text" name="paises" id="paises">-->
+        <input type="button" value="Checar nacionalidade" onclick="calcularNacionalidade()"> <br>
+        <div>
+            <p class="paragrafo">Sua nacionalidade é: </p> <p class="paragrafo" id="nac"></p>
+        </div>
     </form>
 
     <script>
@@ -73,12 +80,23 @@
                 window.document.querySelector('#result').innerHTML += '<p>Você ultrapasosu a velocidade permitida. <strong>MULTADO!</strong></p>'
             }
         }
+        /* Esse código dentro dessa função vale para o index text:
         function calcularNacionalidade() {
-            var nac = window.document.querySelector('#paises')
+            var nac = window.document.querySelector('#paises').value
             if (nac == 'Brasil'){
-                window.document.querySelector('#nac').innerHTML += 'Brasileira' // Pq que não está funcionando??? Ei tinha feito c a lista de seleção e pensei que poderia ser isso, mas mudei e continua com problema...
+                window.document.querySelector('#nac').innerHTML += 'Brasileira'
             } else {
                 window.document.querySelector('#nac').innerHTML += 'Estrangeira'
+            }
+        }*/ 
+        function valcularNacionalidade () { // Esse código foi dado pelo Chat GPT, mas não está funcionando...
+            var nac = window.document.querySelector('#paises')
+            var index = nac.selectedIndex //Pesquisar sobre selectedIndex
+            var valorSelecfionado = nac.options[index].value // pq esse [index]?
+            if (valorSelecionado === 'Brasil'){ // Pq essa igualdade restrita, e não a outra?
+                window.document.querySelector('#nac').innerHTML = 'Brasileira'
+            } else {
+                window.document.querySelector('#nac').innerHTML = 'Estrangeira'
             }
         }
     </script>
