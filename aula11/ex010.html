@@ -13,6 +13,7 @@
 <body>
     
     <h1>Velocidade Máxima</h1>
+    <p>Condução Simples (possui apenas o if).</p>
     <p> Velocidade do carro:
     <input type="number" name="vel" id="vel"> Km/h </p>
     <input type="submit" value="Verificar" onclick="calcularVelocidade()">
@@ -20,6 +21,19 @@
     <p>Dirija sempre utilizando o cinto de segurança!</p>
 
     <h1>Nacionalidade</h1>
+    <p>Condição normal ou completa (possui if e else).</p>
+    <form>
+        <p> Digite o nome completo do país em que você nasceu: </p>
+        <input type="text" name="país" id="país">
+        <input type="button" value="Checar nacionalidade" onclick="calcularNacionalidade()"> <br>
+        <div>
+            <p class="paragrafo">Sua nacionalidade é: </p> <p class="paragrafo" id="nac"></p>
+        </div>
+    </form>
+
+    <h1>Nacionalidade com Seleção em Lista</h1>
+    <p>Tentativa de aplicar a condução feita acima, mas no lugar de o visitante digitar o nome (o que pode gerar erro), ele deve encontrar o seu país na lista. <br>
+    OBS: Não digitei todos os 193 países existentes. Coloquei os primeiros, em ordem alfabética, só para ter uma ideia de como ficaria.</p>
     <p style=color:red> (Em manutenção) </p>
     <form>
         <label for="pais">Selecione o país em que você nasceu: </label>
@@ -65,7 +79,6 @@
             <option value="CL">Chile</option>
             <option value="outros">Outro</option>
         </select>
-        <!--<input type="text" name="paises" id="paises">-->
         <input type="button" value="Checar nacionalidade" onclick="calcularNacionalidade()"> <br>
         <div>
             <p class="paragrafo">Sua nacionalidade é: </p> <p class="paragrafo" id="nac"></p>
@@ -80,16 +93,16 @@
                 window.document.querySelector('#result').innerHTML += '<p>Você ultrapasosu a velocidade permitida. <strong>MULTADO!</strong></p>'
             }
         }
-        /* Esse código dentro dessa função vale para o index text:
-        function calcularNacionalidade() {
-            var nac = window.document.querySelector('#paises').value
+        function calcularNacionalidade() { // Fórmula para Nacionalidade com o input: text.
+            var nac = window.document.querySelector('#país').value
             if (nac == 'Brasil'){
                 window.document.querySelector('#nac').innerHTML += 'Brasileira'
             } else {
                 window.document.querySelector('#nac').innerHTML += 'Estrangeira'
             }
-        }*/ 
-        function valcularNacionalidade () { // Esse código foi dado pelo Chat GPT, mas não está funcionando...
+        }
+
+        function valcularNacionalidade () { // Fórmula para o Nacionalidade em Lista. Esse código foi dado pelo Chat GPT, mas não está funcionando...
             var nac = window.document.querySelector('#paises')
             var index = nac.selectedIndex //Pesquisar sobre selectedIndex
             var valorSelecfionado = nac.options[index].value // pq esse [index]?
