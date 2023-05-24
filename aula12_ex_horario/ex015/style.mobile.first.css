@@ -11,8 +11,7 @@ header, h1{
 
 main{
     background-color: antiquewhite;
-    padding: 10px;
-    padding-bottom: 15px;
+    padding: 15px 10px 10px 10px;
     margin: 10px auto;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.344);
@@ -32,17 +31,21 @@ h1{
     text-align: center;
 }
 
-h2{
-    color: red;
-    background-color: aliceblue;
-    padding: 30px 10px;
-    margin: 20px;
-    width: 80vw;
-    text-align: center;
+section{
+    padding: 5px;
+    margin-left: 5px;
 }
 
-.titform{
-    font-size: 1.5em;
+form>section>label, form>section>p{
+    font-size: 1.4em;
+    margin: 5px 0px;
+    padding: 5px 0.8px;
+}
+
+#botao{
+    display: block;
+    font-size: 1em;
+    margin: 5px 10px;
 }
 
 p{
@@ -64,7 +67,7 @@ img{
     text-align: center;
 }
 
-section{
+#resultado{
     text-align: center;
 }
 
@@ -72,6 +75,13 @@ a{
     color: rgb(143, 141, 140);
     text-decoration: none;
     font-weight: bold;
+}
+
+main footer {
+    width: 90%;
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.301);
+    text-align: justify;
 }
 
 footer{
