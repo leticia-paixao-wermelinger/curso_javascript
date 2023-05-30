@@ -11,26 +11,20 @@ function verificar () {
         var genero = ''
         var raca = document.getElementsByName('cor')
         var cor = ''
-        img.setAttribute('id','foto')
         if (sex[0].checked){
             genero = 'uma mulher'
             if (raca[0].checked){
                 cor = 'branca'
                 if (idade <= 11){
-                    img.setAttribute('src', 'imagens/kid_white_girl.png')
-                    // Alternativa B de inclusão de imagens: img.src = 'imagens/kid_white_girl.png'
+                    img.src = 'imagens/kid_white_girl.png'
                 } else if (idade >= 12 && idade < 18){
-                    img.setAttribute('src', 'imagens/teen_white_girl.png')
-                    // Alternativa B de inclusão de imagens: img.src = 'imagens/teen_white_girl.png'
+                    img.src = 'imagens/teen_white_girl.png'
                 } else if (idade >= 18 && idade < 39){
-                    img.setAttribute('src', 'imagens/young_white_woman.png')
-                    // Alternativa B de inclusão de imagens: img.src = 'imagens/young_white_woman.png'
+                    img.src = 'imagens/young_white_woman.png'
                 } else if (idade > 39 && idade < 70){
-                    img.setAttribute('src', 'imagens/middleage_white_woman.png')
-                    // Alternativa B de inclusão de imagens: img.src = 'imagens/middleage_white_woman.png'
+                    img.src = 'imagens/middleage_white_woman.png'
                 } else {
-                    img.setAttribute('src', 'imagens/old_white_woman.png')
-                    // Alternativa B de inclusão de imagens: img.src = 'imagens/old_white_woman.png'
+                    img.src = 'imagens/old_white_woman.png'
                 }
             } else if (raca[1].checked) {
                 cor = 'preta'
