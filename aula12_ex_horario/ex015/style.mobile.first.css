@@ -40,11 +40,13 @@ form>p{
     text-align: center;
 }
 
-label, form p{
+form label, form p{
     font-size: 1.4em;
     margin: 5px 0px;
     padding: 5px 0.8px;
 }
+
+/* PQ Q OS LABELS DE RADIO NÃO ESTÃO FICANDO DO TAMANHO CORRETO??  O FONT-SIZE É O MESMO, 1.4EM, MAS ELE ESTÁ FICANDO MAIOR DO QUE OS DEMAIS TEXTOS COM O MESMO TAMANHO. */
 
 span{
     display: block;
