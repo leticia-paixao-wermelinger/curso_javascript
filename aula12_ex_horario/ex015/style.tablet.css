@@ -10,10 +10,13 @@ h1{
 }
 
 main{
-    width: 550px;
-    max-height: 550px;
+    max-width: 550px;
+    transition: width .4s, height .4s;
+    transition-timing-function: ease;
 }
 
 img{
-    max-width: 500px;
+    max-width: 90%;
+    transition: width .4s, height .4s;
+    transition-timing-function: ease;
 }
