@@ -36,10 +36,18 @@ section{
     margin-left: 5px;
 }
 
-form>section>label, form>section>p{
+form>p{
+    text-align: center;
+}
+
+label, form p{
     font-size: 1.4em;
     margin: 5px 0px;
     padding: 5px 0.8px;
+}
+
+span{
+    display: block;
 }
 
 #botao{
@@ -49,7 +57,7 @@ form>section>label, form>section>p{
 }
 
 p{
-    font-size: 1.5em;
+    font-size: 1.4em;
     padding: 2px;
     margin: 8px;
 }
@@ -65,6 +73,7 @@ img{
 
 #result{
     text-align: center;
+    font-size: 1.8em;
 }
 
 #resultado{

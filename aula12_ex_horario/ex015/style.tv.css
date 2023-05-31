@@ -15,6 +15,10 @@ main{
     transition-timing-function: ease;
 }
 
+span{
+    display: inline;
+}
+
 img{
     max-width: 700px;
     transition: width .4s, height .4s;
