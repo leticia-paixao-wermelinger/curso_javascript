@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.mobile.first.css" media="all"> <!-- Mobile First -->
+    <link rel="stylesheet" href="style.tablet.css" media="screen and (min-width:768px) and (max-width:992px)">
+    <link rel="stylesheet" href="style.desktop.css" media="screen and (min-width: 992px) and (max-width:1200px)">
+    <link rel="stylesheet" href="style.tv.css" media="screen and (min-width:1200px)">
+    <title> Exercício Hora do Dia </title>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <main>
+        <form">
+            <label for="start"> Início: </label>
+            <input type="number" name="start" id="start" placeholder="Digite aqui em que número a contagem vai começar">
+            <label for="ending"> Fim: </label>
+            <input type="number" name="ending" id="ending" placeholder="Digite aqui em que número a contagem vai terminar">
+            <label for="step"> Passo: </label>
+            <input type="number" name="step" id="step" placeholder="Digite aqui qual vai ser a distância entre os números">
+            <input type="button" value="Contar">
+        </form>
+        <p id="hora"> Aqui vai a hora... </p>
+    </main>
+    <footer>
+        &#169;  Site criado por <a href="https://gustavoguanabara.github.io/" target="_blank">Gustavo Guanabara</a> para o <a href="https://www.youtube.com/cursoemvideo" target="_blank">CursoemVídeo</a> e desenvolvido pela estudante <a href="https://github.com/leticia-paixao-wermelinger" target="_blank">Letícia Paixão</a>.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
