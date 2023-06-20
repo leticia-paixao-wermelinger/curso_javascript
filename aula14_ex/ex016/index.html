@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.tv.css" media="screen and (min-width:1200px)">
     <title> Exercício Hora do Dia </title>
 </head>
-<body onload="carregar()">
+<body>
     <header>
         <h1>Vamos contar</h1>
     </header>
@@ -22,9 +22,10 @@
             <input type="number" name="ending" id="ending" placeholder="Digite aqui em que número a contagem vai terminar">
             <label for="step"> Passo: </label>
             <input type="number" name="step" id="step" placeholder="Digite aqui qual vai ser a distância entre os números">
-            <input type="button" value="Contar">
+            <input type="button" onclick="carregar()" value="Contar">
         </form>
-        <p id="hora"> Aqui vai a hora... </p>
+        <p id="contagem"> Que contagem você quer fazer? </p>
+        <p id="resultado"></p>
     </main>
     <footer>
         &#169;  Site criado por <a href="https://gustavoguanabara.github.io/" target="_blank">Gustavo Guanabara</a> para o <a href="https://www.youtube.com/cursoemvideo" target="_blank">CursoemVídeo</a> e desenvolvido pela estudante <a href="https://github.com/leticia-paixao-wermelinger" target="_blank">Letícia Paixão</a>.
